@@ -1,0 +1,1260 @@
+/**
+ *     Default HTML selectors
+ */
+body {
+   background-color:#FFFFFF;
+}
+body, div, p, span {
+   font-family:arial,sans-serif;
+}
+
+
+h1#libraryname {
+	font-style: verdana!important;
+    font-weight: normal !important;
+    text-shadow: none!important;
+    text-transform: none!important;
+  
+    }
+.portalelmt h1#libraryname img {
+    border: none!important;
+    float: left;
+    margin-right: 15px;
+    padding-right: 15px;
+    vertical-align: middle;
+}
+h2 {
+    font-size: x-large;
+    text-align: center;
+}
+h3 {
+   font-size: x-large;
+   text-align: center;
+   font-style: italic;
+   font-weight: bold;
+}
+h4 {
+   margin-bottom:2px;
+}
+
+form {
+   margin-top: 5px;
+}
+
+/**
+   Miscellaneous 
+ */
+div.SS_CopyRightStatement {
+  text-align: center;
+}
+
+div.res, div.cl {
+       font-size:100%!important;
+}
+
+/**
+ *    PageMessage Section: 
+ *         These selectors pertain to the default PageMessage section
+ *       locate at the top of the search results pages. 
+ */
+table.SS_PageMessageTop {
+    background-color: #D6E7F7;   
+    width: 100%;
+    font-family: Arial; 
+}
+
+span.SS_LibraryName {
+    text-align: left;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+span.SS_PageTitle {
+    text-align: left;
+    font-weight: bold;  
+    font-size: large;
+}   
+
+div.SS_EJLogo {
+    text-align: right;
+}
+
+table.SS_PageMessageBottom {
+    width: 100%;
+    border: 3px solid #D6E7F7;
+}
+
+td.SS_PageMessageNavigationBar {
+    text-align: right;
+}
+
+a.SS_EJHomeLink {
+    margin-right: 6px;
+}
+
+a.SS_HelpLink {
+    margin-right: 6px;   
+}
+
+
+/**
+  *    E-Journal Portal Section:
+  *        The following selectors pertain to the main 
+  *        E-Journal Portal page.
+  */
+table.SS_EJPTable {
+    width: 100%;      
+}
+
+table.SS_EJPLeftCell {
+   width: 5%;
+}
+
+table.SS_EJPMainCell {
+   width: 95%;
+}
+
+div.SS_EJPErrorMessage {
+    font-weight:bold;
+    color:red;
+}
+
+span.SS_ResultsCount{
+  font-weight: bold;
+}
+
+span.SS_ResultsTypeNote{
+    font-weight: bold;
+}
+
+
+/**
+ * Journal display
+ */
+span.SS_BookTitle {
+        font-weight:bold;
+        text-align: left;
+        
+}
+
+span.SS_JournalTitle {
+        font-weight:bold;
+        text-align: left;
+}
+
+span.SS_JournalISSN {
+   font-size: 75%;
+   font-weight:bold;
+}
+
+span.SS_BookISBN {
+   font-size: 75%;
+   font-weight:bold;
+}
+
+div.SS_NoJournalFoundMsg {
+  
+}
+
+span.SS_EJPResultsRefinerLink {
+    font-size: 75%;
+}
+
+span.SS_EJPResultsJournalLinker {
+    font-size: 75%;
+}
+
+span.SS_EJPTermsOfUse {
+    font-size:8pt;
+}
+
+.SS_HoldingsList
+{
+    font-family: Arial;
+    font-size: small;
+}
+
+/**
+ *  Navigation Links
+ */
+div.SS_SkipNavigationLinks{
+    text-align: center;
+}
+
+.SS_LetterLinks
+{
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/** Tab related classes **/
+
+  .SS_EJP_TabContainer {
+      float:           left;
+      width:           100%;
+      background:      #DAE0D2 url("http://mz8cl4dl5q.search.serialssolutions.com/alEJPStatic/img/ejp_tab_bg.gif") repeat-x bottom;
+      font-size:       93%;
+      line-height:     normal;
+      margin-bottom:   1em;     
+  }
+  .SS_EJP_TabContainer ul {
+      margin:          0;
+      padding:         10px 5px 0;
+      list-style:      none !important;
+  }
+  .SS_EJP_TabContainer li {
+      float:           left;
+      background:      url("http://mz8cl4dl5q.search.serialssolutions.com/alEJPStatic/img/ejp_tab_left_both_unselected.gif") no-repeat left top;
+      margin:          0;
+      padding:         0 0 0 5px;
+      border-bottom:   1px solid #765;
+  }           
+  .SS_EJP_TabContainer a {
+      float:           left;
+      display:         block;
+      width:           .1em;
+      background:      url("http://mz8cl4dl5q.search.serialssolutions.com/alEJPStatic/img/ejp_tab_right_both_unselected.gif") no-repeat right top;
+      padding:         8px 15px 4px 10px;
+      text-decoration: none;
+      color:           #00c;
+      white-space:     nowrap;
+  }
+  
+  .SS_EJP_TabContainer > ul a {
+      width:           auto;
+  }
+
+/* Commented Backslash Hack hides rule from IE5-Mac */
+  .SS_EJP_TabContainer a {
+    float:             none;
+  }
+/* End IE5-Mac hack */
+
+  .SS_EJP_TabContainer a:hover {
+      color:           #333;
+  }
+  
+  li.SS_EJP_TabListItemSelectedAll, 
+  li.SS_EJP_TabListItemSelectedJournals, 
+  li.SS_EJP_TabListItemSelectedBooks, 
+  li.SS_EJP_TabListItemSelectedOther {
+      background:url("http://mz8cl4dl5q.search.serialssolutions.com/alEJPStatic/img/ejp_tab_left_both.gif") no-repeat;
+      background-position:0 -150px;
+      border-width:0;
+  }
+
+   /* selected anchor */
+  .SS_EJP_TabListItemSelectedAll      a,
+  .SS_EJP_TabListItemSelectedJournals a, 
+  .SS_EJP_TabListItemSelectedBooks    a, 
+  .SS_EJP_TabListItemSelectedOther    a {
+      background:url("http://mz8cl4dl5q.search.serialssolutions.com/alEJPStatic/img/ejp_tab_right_both.gif") no-repeat;    
+      background-position:100% -150px;
+      font-weight: bold;
+      padding-bottom:5px;
+      color:#333;
+  }
+  
+  .SS_EJP_TabContainer li:hover,
+  .SS_EJP_TabContainer li:hover a {
+      background-position:0% -150px;
+      color:#333;
+  }  
+  
+  .SS_EJP_TabContainer li:hover a {
+      background-position: 100% -150px;
+  }  
+  
+  .SS_CategorySelectorTD1, 
+  .SS_CategorySelectorTD2 {
+      vertical-align: top; 
+      width: 50%; 
+  }     
+  
+  div.SS_LocaleWidget {
+    float: right;
+    width: 25%;
+  }
+  
+ 
+
+body {
+	margin: 0;
+	font-size: 13px;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+#container_bx3{
+  width:1000px;
+  margin:auto;  
+}
+
+#page {
+	width: 74.923em;
+	margin-left: auto;
+	z-index: 2;
+	position: relative;
+	margin-right: auto;
+}
+
+a,a:link,a:visited {
+	color: #3274C6;
+	text-decoration: none;
+}
+
+a:active,li a.active {
+	color: #1670ac;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+
+.SS_CategorySelector {
+	padding-bottom: 5px;
+}
+
+.SS_ResultsAtoZLinks  a {
+	font-weight: bold;
+	padding: 2px 4px 2px 4px;
+	border: 1px solid #ddd;
+	text-decoration: none;
+}
+
+.SS_ResultsAtoZLinks  a:hover {
+	background-color: #cccccc;
+}
+
+h2.title {
+	color: #6f787b;
+	font-size: 21px;
+	padding-top: 0pt;
+	padding-right: 0pt;
+	padding-bottom: 3px;
+	padding-left: 25px;
+	font-family: "Pochoir",verdana,arial,sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-left: 13px;
+	margin-bottom: 10px;
+	margin-top: -90px;
+	padding-top: 25px!important;
+	text-align: left;
+}
+
+hr {
+	display: none;
+}
+
+#footer {
+	width: 74.923em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	color: #FFF;
+}
+
+#footer-bg {
+	height: 100px;
+	padding: 10px 0px 9px 0;
+}
+
+#footer a {
+	color: #FFF;
+}
+
+.SS_CopyRightStatement a {
+	display: none;
+}
+
+#footer img {
+	vertical-align: middle;
+}
+
+.SS_CopyRightStatement {
+	display: none;
+}
+
+.SS_CopyRightStatement font {
+	display: none;
+}
+
+#header-background {
+	position: absolute;
+	top: 25px;
+	left: 0;
+	width: 100%;
+	height: 120px;
+	background: #6F787B;
+	z-index: 1;
+}
+
+
+
+#titlebar {
+	background: #6F787B;
+	height: 105px;
+	top: 25px;
+	width: 100%;
+	
+
+/*-m
+
+oz-border-radius:0 0 10px 10px;
+	-webkit-border-radius:0 0 10px 10px;
+	border-radius:0 0 10px 10px;*/
+	color: #fff;
+	font-size: 0.9em;
+	z-index: 2;
+	position: relative;
+}
+
+#titlebar .logo {
+	border: 0;
+	display: block;
+	height: 120px;
+	width: 520px;
+	background: url('logo.png') no-repeat;
+	position: absolute;
+	left: 20px;
+	z-index: 4;
+}
+
+#locale {
+	margin-top: 5px!important;
+}
+
+
+.utilitybg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 27px;
+	background: #6F787B;
+	z-index: 2;
+}
+
+.utility li select {
+	width: 11em;
+	font-family: Arial,Helvetica,Verdana,sans-serif!important;
+	color: #000;
+	background: #6F787B;
+	border: 1px solid #6F787B;
+	font-size: 11px!important;
+}
+
+.utility {
+	position: absolute;
+	color: #000;
+	top: -46px;
+	font: 11px;
+	left: 0;
+	width: 100%;
+	height: 27px;
+	z-index: 3;
+}
+
+.utility li a {
+	color: #000;
+	text-decoration: none;
+	font-family: Arial,Helvetica,Verdana,sans-serif!important;
+	font-size: 11px;
+	display: inline-block;
+	border-right: solid 1px #FFF;
+	padding: 0 14px;
+}
+
+.utility li a:hover {
+	color: #fff;
+}
+
+.utility ul {
+	margin-top: 21px;
+	text-align: center;
+}
+
+.utility ul li {
+	list-style: none;
+	margin: 0;
+	background: none;
+	display: inline;
+}
+
+.utility li.last a {
+	border: none!important;
+}
+
+#header {
+	border: 0;
+}
+
+#body {
+	background: #fff;
+	min-height: 465px;
+	margin-bottom: 20px;
+}
+
+#body #border {
+	border-top: 4px solid #008a0c;
+	padding: 10px 30px 5px 30px;
+	margin: 0;
+}
+
+#footerbg {
+	width: 100%;
+	background: #6f787b url(footer-bg.png) repeat-x;
+	height: 200px;
+}
+
+#footer-inner {
+	background: #6f787b url(background_bas_page.png) repeat-x;
+	margin-top: 20px;
+	min-height: 24px;
+}
+
+#begin_container {
+	background-color: #6f787b;
+	background-repeat: repeat-x;
+	background-position: center;
+	margin-top: 20px;
+	height: 50px;
+	width: 970px;
+	background-image: url("background_avatars_bas.png");
+}
+
+#footer .logo {
+	float: left;
+	margin: 50px 6px 0 5px;
+}
+
+#footer .site-name {
+	font-family: "Pochoir","verdana bold",verdana,arial,sans-serif;
+	font-weight: normal;
+	padding: 62px 0 0 8px;
+	text-shadow: 0 2px 2px rgba(0,0,0,0.6);
+	float: left;
+}
+
+#footer .site-name a {
+	font-size: 2em;
+	color: #ffffff;
+}
+
+#footer .site-name a:hover {
+	text-decoration: none;
+}
+
+.region-footer .address-location {
+	color: #fff;
+	background-color: #6f787b;
+	font-family: Arial,sans-serif;
+	font-size: 0.917em;
+	padding: 0px 0 5px;
+	text-align: center;
+}
+
+.region-footer .address-location a {
+	color: #fff;
+}
+
+.region-footer .address-location a:hover {
+	text-decoration: underline;
+}
+
+#nav {
+	width: 100%;
+	margin-bottom: 112px;
+	position: relative;
+	top: 7px;
+	z-index: 6;
+	overflow: visible;
+	background-color: #008a0c;
+	background-image: none;
+	height: 32px;
+	border-top: 2px solid #ffffff;
+	border-left: 2px solid #ffffff;
+	border-right: 2px solid #ffffff;
+}
+
+#menu {
+	margin: 0;
+	padding: 0;
+}
+
+#nav #menu>li {
+	list-style: none;
+	display: inline-block;
+	margin: 0;
+	padding: 7px 0;
+	padding-left: 19px;
+	padding-right: 19px;
+	font-family: "verdana bold",verdana,arial,sans-serif;
+	position: relative;
+	float: left;
+	font-size: 1.15em;
+	font-weight: 400;
+	text-transform: uppercase;
+	border-right: 1px solid #585757;
+	background-color: #008a0c;
+}
+
+#nav #menu>li:hover {
+	background-background-image: none;
+	background-color: #6f787b;
+	padding-left: 19px;
+	padding-right: 19px;
+	color: #fff;
+	cursor: pointer;
+}
+
+#nav #menu>li h2 {
+	font-variant: small-caps;
+	padding: 0 15px;
+	font-size: 14px;
+	font-weight: 400;
+	margin: 0;
+}
+
+#nav #menu>li>h2>a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+#nav #menu>li>h2>a:hover {
+	background: none;
+	color: #000;
+}
+
+.SS_LocaleWidget {
+	float: right;
+	width: 15%;
+	margin-top: -75px;
+	margin-bottom: 25px;
+}
+#360link select#locale {
+	margin-left: 125px!important;
+
+}
+#template .SS_LocaleWidget {
+	float: right;
+	width: 12%;
+	margin-top: -95px;
+	margin-bottom: 25px;
+}
+
+.SS_EJPTable {
+	margin-top: -40px;
+}
+
+#CandyWrapper {
+	margin-top: -70px;
+}
+
+#CitationResults {
+	top: -30px;
+}
+
+#journalsearch {
+	position: relative;
+	top: -40px;
+}
+
+#journalsearch h4 {
+	margin-left: 5px;
+}
+
+#CitationResults #CandyWrapper {
+	margin-top: 0px!important;
+}
+
+.SS_searchTitle, .SSALCitationStyleInfoLink {
+	display: none!important;
+}
+
+
+
+div.doiNumber, div.res, div.cl,span.SS_ContentHeading  {
+	font-size: 100%!important;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+td, td.column_header {
+	border: 0;
+	padding: 4px 5px;
+	text-align: left;
+}
+
+div#rulescirc th {
+    background-color: #EEEEEE!important;
+    font-weight: bold;
+    padding: 2px 23px;
+    text-align: center;
+}
+div#rulescirc td {
+    background-color: #FFFFFF!important;
+    border-bottom: 1px solid #DDDDDD!important;
+    border-left: 1px solid #DDDDDD!important;
+    padding: 3px 5px;
+}
+div#rulescirc caption, div#rulescirc th {
+    text-align: left;
+}
+
+div#rulescirc table {
+	border-spacing:0!important;
+}
+
+#BookLinkTable, #JournalCL, #ArticleCL {
+	white-space: nowrap;
+}
+
+
+span#SearchResults.SS_searchTitle, span#MoreOptions.SS_searchTitle, h4, span.Additional {
+	font-size: 14px;
+}
+
+table#BookLinkTable td, table#JournalLinkTable td {
+	background-color: #ffffff;
+}
+
+h4, .CustomLinkGroupLabel  {
+	font-size: 14px;
+	color: #6f787b!important;
+	font-weight: bold;
+}
+
+div.res {
+	font-weight: normal;
+}
+
+div#CitationResults, table.CandyWrapper {
+	margin-left: 0px;
+}
+
+div#DatabaseCL.cl, td .ResultsRow {
+	max-width: 250px;
+}
+
+
+
+span#MoreOptions.SS_searchTitle {
+	font-size: 12px;
+	margin-left: 5px;
+}
+
+div#ArticleCL.cl {
+	font-weight: bold;
+}
+
+#BookLinkTable a, #JournalLinkTable a {
+	color: #008a0c;
+}
+
+.SS_UIDSearchForm {
+	margin-top: 10px;
+}
+
+.SS_UIDSearchNote {
+	font-size: 85%;
+	color: #6f787b;
+}
+
+.peerreviewed {
+	font-size: 85%;
+	color: #008a0c;
+	font-style: italic;
+}
+
+.tocrss {
+	font-size: 85%;
+	color: #008a0c;
+	font-style: italic;
+}
+
+.tocrss a{ 
+	padding: 5px 33px 5px 0;
+	background: transparent url(../img/rss_icon.gif) no-repeat center right;
+	
+}
+.SS_JournalCoverageDates{
+	color: #6f787b;
+}
+
+#body input.RefinerInput, #body select,#body textarea, #SS_CFocusTag, .SS_UIDSearchForm input, .SearchForm input {border:1px solid #dddad3;padding:3px;background-color:#fff !important;margin: 10px;}
+
+.RefinerLabel {
+	margin: 10px;
+	padding: 5px;
+}
+
+#CitationRefiner{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.RefinerForm{
+	background-color: #F0F0F0;
+	padding-right:10px;
+}
+
+.SS_NoResults{
+	font-size: 14px;
+	color: #6f787b;
+	font-weight: bold;
+	position: relative;
+	top: 5px;
+	padding: 15px;
+}
+
+#360link .SS_NoResults {
+	color: #6f787b!important;
+}
+
+span.SS_ContentHeading, img.CellSpacer, p#RefinerLink2, td.BorderW, tr.LinePadRow, td.BorderE, td.CornerNW, td.BorderN img, td.CornerSE, td.CornerSW, td.BorderS, td.BorderW {
+	display: none;
+}
+
+table#BookLinkTable, table#JournalLinkTable {
+	width: 95% !important;
+	font-size: 1.3em;
+	position: relative;
+	
+}
+
+td.CitationLabel {
+	width: 10%;
+	font-weight: bold;
+}
+
+td#CitationJournalIssnValue, td#CitationJournalVolumeValue {
+	width: 25%;
+}
+
+td div#DateCL {
+	color: #333;
+}
+
+
+
+div#BookCL a, div#ArticleCL a {
+	display: block; 
+	margin: 0 ; 
+	padding: 4px 15px; 
+	border: 1px solid #40AD6A; 
+	border-bottom-color: #209964; 
+	color: white; 
+	text-align: center; 
+	text-shadow: 0 -1px 0 rgba(0,0,0,.3); 
+	text-decoration: none; 
+	-webkit-border-radius: 4px; 
+	-moz-border-radius: 4px; 
+	khtml-border-radius: 4px; 
+	border-radius: 4px; 
+	background: #008a0c; 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(.2, #00a904), color-stop(1, #008702)); 
+	background: -moz-linear-gradient(center top, #00a904 20%, #008702 100%); 
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29); 
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29); 
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29);
+}
+
+div#JournalCL a, a.AnchorButton {
+	display: block; 
+	margin: 0 .5em 0 2em; 
+	padding: 4px 15px; 
+	border: 1px solid #777; 
+	border-bottom-color: #333; 
+	color: #343434; 
+	text-align: center; 
+	text-decoration: none; 
+	-webkit-border-radius: 4px; 
+	-moz-border-radius: 4px; 
+	khtml-border-radius: 4px; 
+	border-radius: 4px; 
+	background: #999; 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(.2, #ddd), color-stop(1, #999)); 
+	background: -moz-linear-gradient(center top, #ddd 20%, #999 100%); 
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29); 
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29); 
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29);
+}
+
+div#DatabaseCL a {
+	display: block;
+	padding: .5em .3em;
+	text-decoration: none;
+}
+
+
+
+div#DatabaseCL a:hover {
+
+	text-decoration: underline;
+}
+
+div#CitationResults {
+	padding: 0 0 !important;
+}
+
+td.CitationValue div {
+	font-size: 95%;
+	line-height: 1.5em;
+	font-weight: normal;
+}
+
+#CitationJournalTitleValue {
+	font-style: italic;
+}
+
+#CitationJournalPage, #CitationJournalVolume, #CitationJournalIssn, #CitationJournalAuthorLabel, #CitationBookIsbn, #CitationBookDate, #CitationBookTitleLabel, #CitationBookAuthorLabel, #CitationLabel,#CitationJournalArticleLabel, #CitationJournalTitleLabel, #CitationJournalIssue, #CitationJournalDate, #CitationJournalDOILabel {
+	color: #777;
+	font-size: 90%;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+
+#SearchResults {
+	width: 100%;
+	margin: 1em 0 0 0;
+	border-bottom: 1px solid #ddd;
+}
+
+table#ContentAvailableTable {
+	position: relative;
+	top: -28px;	
+}
+ 
+.SS_CitationTable{
+	position: relative;
+	top: -30px;
+}
+
+div.url{
+	display: none!important;
+}
+
+#BookLinkTable, #JournalLinkTable {
+	position: relative;
+	top: -40px;	
+}
+
+.WideNoBorder{
+	position: relative;
+
+	top: -20px;	
+}
+. SS_UIDSearchForm .WideNoBorder{
+	position: relative;
+	top: -15px!important;	
+}
+
+
+#RefinerLink0 {
+	position: relative;
+	left: 200px;
+}
+
+table h4, {
+	color: #333;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+/*
+div#RefinerLink1 {
+	width: 50%;
+}
+*/
+h3 {
+	font-family: "Palatino", "Book Antiqua", Times, "Times New Roman", serif;
+	font-size: 1.5em !important;
+	margin: 0 !important;
+	color: #093a6d;
+}
+
+div#footer {
+	margin-top: 3.5em;
+}
+
+div#citation {
+	position: relative;
+/* 	top: -30px; */
+	padding: 10px;
+	width: 550px!important;
+	background-color:#F0F0F0;
+	margin: 1em 0;	
+	font-size: 1em;
+}
+
+	
+.SS_UIDSearchForm, .SS_SkipNavigationLinks {
+	display: none;
+}
+
+
+#journalcouv img {height:70px; width:auto;padding:2px 10px 3px 3px;}
+#journalcouv {
+	position: relative;
+	float: left;
+}
+
+
+.SS_Holding{
+	padding: 15px;
+}
+
+.SS_EJP_TabContainer {
+
+background-color: #fff;
+
+background-image: none;}
+
+
+.SS_EJP_TabContainer {
+	position: relative;
+	top: -30px;
+}
+
+.SS_EJP_TabStop, .SS_EJP_TabListItemUnselectedOther{
+	display: none;
+}
+
+#legende 
+{
+
+text-align: right;
+
+padding: 3px 5px 3px 3px;
+
+}
+#legende img
+{
+
+vertical-align: middle;
+
+padding-left: 8px;
+
+padding-right: 3px;
+
+}
+
+/* Link Resolver styles */
+/* If javascript is not avaialable. these styles will improve the 360 Link layout dramatically. */
+/* If javascript is available, the 360Link Reset script will rewrite the page with semantic HTML */
+/*  */
+/* For more info on 360Link Reset, visit http://gvsu.edu/library/360linkreset */
+
+
+/* Styles for javascript disabled */
+
+table {
+	border-collapse: collapse;
+	display: inline-table;
+}
+
+table, table tr, table td {
+	border: none;
+}
+
+div#CitationResults {
+	font-size: 1.1em;
+	line-height: 1.5em;
+	padding: 0 1em !important;
+} 
+
+td.CitationValue div {
+	font-weight: normal;
+}
+
+#CitationJournalTitleValue, 
+#CitationBookTitleValue {
+	font-style: italic;
+}
+
+td.CitationLabel {
+	width: 5em;
+	color: #777;
+	font-weight: bold;
+}
+
+td#CitationJournalIssnValue, td#CitationJournalVolumeValue {
+	width: 25%; }
+
+#SearchResults {
+	width: 100%;
+	margin: 1em 0; }
+
+a#refworks {
+	display: inline-block;
+	padding-top: 20px;
+	border: 0;
+	height: 0;
+	width: 102px;
+	background: transparent url(../img/refworks-logo.gif) top left no-repeat;
+	position: relative;
+	top: 4px;
+	left: 10px;
+	overflow: hidden; }
+
+div#ArticleCL a,
+div#JournalCL a,
+a.article-button {
+	margin: 0 ; 
+	padding: 4px 15px; 
+	border: 1px solid #40AD6A; 
+	border-bottom-color: #209964; 
+	color: white; 
+	text-align: center; 
+	text-shadow: 0 -1px 0 rgba(0,0,0,.3); 
+	text-decoration: none; 
+	-webkit-border-radius: 4px; 
+	-moz-border-radius: 4px; 
+	khtml-border-radius: 4px; 
+	border-radius: 4px; 
+	background: #008a0c; 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(.2, #00a904), color-stop(1, #008702)); 
+	background: -moz-linear-gradient(center top, #00a904 20%, #008702 100%); 
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29); 
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29); 
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29);
+	 }
+
+	
+div#JournalCL a {
+	background: #999; 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(.2, #ddd), color-stop(1, #999)); 
+	background: -moz-linear-gradient(center top, #ddd 20%, #999 100%);
+	border: 1px solid #777; 
+	border-bottom-color: #333; 
+	color: #343434; 
+	margin: 0 .5em 0 2em; }
+
+table#JournalLinkTable {
+	width: 95% !important;
+	margin-top: .5em;
+	font-size: 1.3em; }
+
+td div#DateCL {
+	margin-left: 2em;
+	color: #333; }
+
+div#DatabaseCL a,
+a.SS_DatabaseHyperLink { 
+	/* Don't make the database names look like links! */
+	color: #000 !important;
+	cursor: text !important;
+	display: inline-block;
+	padding: .5em .3em; 
+	text-decoration: none; }
+
+#ContentNotAvailableTable {
+	font-size: 1.2em; }
+
+#ContentNotAvailableTable a {
+	color: #069;
+	text-decoration: none; }
+	
+table#ContentAvailableTable,
+span.SS_ContentHeading, 
+img.CellSpacer, 
+p#RefinerLink2, 
+td.BorderW, 
+tr.LinePadRow, 
+td.BorderE, 
+td.CornerNW, 
+td.BorderN img, 
+div#RefinerLink0, 
+td.CornerSE, 
+td.CornerSW, 
+td.BorderS, 
+td.BorderW,
+div.SS_NoResults {
+	/* Cruft cruft cruft! Stop the insanity */
+	display: none; }
+
+/* ####################################### */	
+/* Below are styles for javascript enabled */
+
+p.lib-big-text { 
+	margin-top: 2em;
+	font-size: 120%;
+	font-weight: bold; }
+
+p.other-options { 
+	margin-top: 2em;
+	font-size: 110%;
+	font-weight: bold;
+	color: #008A0C; }
+
+#top-result,
+#next-step {
+	margin-top: 2em; }
+
+#next-step li {
+	font-size: 1.4em;
+	margin-top: 1em; }
+
+#top-result li {
+	font-size: 1.6em;
+	margin-bottom: 1em; }
+
+ul#top-result,
+.event-body ul,
+#next-step ul {
+	list-style: none;
+	margin:0;
+	padding:0; }
+
+#next-step ul li a {
+	text-decoration: none; }
+
+#next-step {
+	border-top: 1px solid #ddd; }
+
+a.holding-details {
+		font-size: 1em !important; }
+
+.event-head {
+	color: #1F65A0;
+	font-size: 1.4em;
+	cursor: pointer;
+	margin: .8em 0; }
+
+.event-body ul li {
+	font-size: 1.3em;
+	margin-bottom: .8em; }
+
+.event-body ul li a {
+	text-decoration: none;
+	font-weight: bold; }
+
+.event-body h4 {
+	background: #ddd;
+	padding: .3em .5em; }
+
+.holding-details:hover {
+	background-position:0 -44px ; }
+
+/* clicked state */
+.holding-details:focus {
+	background-position:0 -88px; }
+
+.tooltip {
+	display: none;
+	background: #eee;
+	height:5em;
+	padding:1em;
+	width:13em;
+	font-size:.8em;
+	color:#333;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29); 
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29); 
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29); }
