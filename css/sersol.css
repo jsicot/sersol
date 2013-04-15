@@ -272,9 +272,15 @@ div.SS_SkipNavigationLinks{
       width: 50%; 
   }     
   
-  div.SS_LocaleWidget {
+/*  div.SS_LocaleWidget {
+  } */
+  
+  div.SS_LocaleWidget
+  {
     float: right;
     width: 25%;
+		margin-top:0px;
+		padding-bottom:5px;
   }
   
  
@@ -283,11 +289,6 @@ body {
 	margin: 0;
 	font-size: 13px;
 	font-family: Arial,Helvetica,sans-serif;
-}
-
-#container_bx3{
-  width:1000px;
-  margin:auto;  
 }
 
 #page {
@@ -320,7 +321,7 @@ a:hover {
 
 .SS_ResultsAtoZLinks  a {
 	font-weight: bold;
-	padding: 2px 4px 2px 4px;
+	padding: 1px 3px 1px 3px;
 	border: 1px solid #ddd;
 	text-decoration: none;
 }
@@ -782,7 +783,7 @@ div#ArticleCL.cl {
 
 .tocrss a{ 
 	padding: 5px 33px 5px 0;
-	background: transparent url(../img/rss_icon.gif) no-repeat center right;
+	background: transparent url(http://dl.dropbox.com/u/6135478/360/rss_icon.gif) no-repeat center right;
 	
 }
 .SS_JournalCoverageDates{
@@ -1008,7 +1009,8 @@ div#citation {
 
 
 .SS_Holding{
-	padding: 15px;
+	padding: 8px;
+	min-height: 80px;
 }
 
 .SS_EJP_TabContainer {
@@ -1023,7 +1025,7 @@ background-image: none;}
 	top: -30px;
 }
 
-.SS_EJP_TabStop, .SS_EJP_TabListItemUnselectedOther{
+.SS_EJP_TabStop{
 	display: none;
 }
 
@@ -1258,3 +1260,65 @@ a.holding-details {
 	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29); 
 	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29); 
 	box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29); }
+
+
+/* Spécifique Bx3 */
+#header_ej, #container_bx3
+{
+	width:1000px;
+	margin:auto;
+}
+
+#header_ej
+{
+  border:3px solid #FF9900;
+  padding:10px;
+  background:url("../img/logo_bx3.jpg") center left no-repeat;
+  text-align:right;
+  min-height:160px;
+  height:160px;
+  margin-top:10px;
+}
+
+#header_ej h1
+{
+	padding-top:80px;
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+
+#header_ej h1 a
+{
+	color:#FF9900;
+}
+
+#header_ej p
+{
+	color:#555;
+	font-style:italic;
+}
+
+.SS_ResultsAtoZLinks
+{
+  height: 25px;
+  min-height: 25px;
+  position: relative;
+  top: -5px;
+}
+
+.SS_Holding > table
+{
+  display:block;
+}
+
+.SS_AtoZLinks, .SS_CategorySelector
+{
+  border-top:1px solid #CCC;
+  padding-top:5px;
+}
+
+.SS_CategorySelector
+{
+  padding-bottom:15px;
+  border-bottom:1px solid #CCC;
+}
