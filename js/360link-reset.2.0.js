@@ -23,6 +23,9 @@ jQuery(document).ready(function ()
   var ts = 0;
   var datastring = "";
 
+  var journalissn = "";
+  var bookisbn = "";
+  
 
   // BX3 : On va récupérer le lien du PEB
   var pebLink = jQuery("table.CandyWrapper").find("a.AnchorButton:contains('demande')").attr("href");
@@ -150,7 +153,7 @@ jQuery(document).ready(function ()
     if (bookisbn !== "")
     {
 //      var nextstepsLink = '<li>Trouvez la version imprimée de cet ouvrage <a href="http://www.geobib.fr/babordplus/redirect.php?isbn=' + bookisbn + '" target="_blank">dans Babord+</a></li>';
-      var nextstepsLink = '<div class="zone_next"><a href="http://scd.u-bordeaux3.fr/babordplus_outils/interro_light.php?q_light=' + bookisbn + '" class="next-button">Trouvez la version imprimée</a> de ce document dans Babord+, le catalogue des BU</div>';
+      var nextstepsLink = '<div class="zone_next"><a href="http://scd.u-bordeaux3.fr/babordplus_outils/interro_light.php?q_light=' + bookisbn + '" class="next-button">Rechercher la version imprimée</a> de ce document dans Babord+, le catalogue des BU</div>';
     }
     else
     {
@@ -410,6 +413,12 @@ jQuery(document).ready(function ()
   {
     // Item is not available online or in print
     var Resultdiv = '<div id="ContentNotAvailableTable"><p class="lib-big-text">Désolé, cette référence ne semble pas disponible en ligne.</p>';
+    if ( bookisbn || journalissn )
+    {
+      // On va lancer la recherche dans Babord+
+      Resultdiv = Resultdiv + "<div id='res_bplus' style='font-size:1.2em'>Babord+, recherche en cours <img src='http://www.geobib.fr/erms/img/ajax-loader.gif'/></div>";
+    }    
+    
     // '<p class="other-options">Vous pouvez tenter à nouveau votre chance en utilisant les options ci-dessous.</p>' + 
   }
 
@@ -480,7 +489,7 @@ jQuery(document).ready(function ()
     {
       if (journalissn !== "")
       {
-        nextstepsLink = '<div class="zone_next"><a href="http://scd.u-bordeaux3.fr/babordplus_outils/interro_light.php?q_light=' + journalissn + '" class="next-button">Trouvez la version imprimée</a> de ce document dans Babord+, le catalogue de la BU</div>' + nextstepsLink;
+        nextstepsLink = '<div class="zone_next" id="next_bplus"><a href="http://scd.u-bordeaux3.fr/babordplus_outils/interro_light.php?q_light=' + journalissn + '" class="next-button">Trouvez la version imprimée</a> de ce document dans Babord+, le catalogue de la BU</div>' + nextstepsLink;
         // nextstepsLink = '<li>Trouvez la version imprimée de cette revue <a href="http://scd.u-bordeaux3.fr/babordplus_outils/interro_light.php?q_light=' + journalissn + '" target="_blank">dans Babord+</a></li>' + nextstepsLink;
       }
       else
@@ -496,6 +505,20 @@ jQuery(document).ready(function ()
       // BX3 Pas de résultats
       jQuery("#360link-reset").html('<div style="border:2px solid #FF9900; font-size:1.2em; width:550px; margin:auto; padding:10px; margin-top:10px; text-align:center"><b>Février 2013 : cet outil est en test</b>, n\'hésitez pas à nous <a href="http://scd.u-bordeaux3.fr/contact.php">signaler les problèmes que vous pourriez rencontrer</a></div><div id="page-content" style="margin: 0;"><h2 style="text-align:left;">Votre recherche :</h2><div id="citation">' + citationDiv + '&nbsp;<a href="' + refinerlink + '" title="Modifier votre recherche"><img src="http://catalogue.bu.univ-rennes2.fr/360link/css/pen.png" alt="Modifier votre recherche" /></a></div>' + Resultdiv + '<div id="next-step"><ul>' + nextstepsLink + '</ul></div></div><div class="clear"></div>' + '<p style="border-top:1px solid #DDD; padding-top:5px">Si vous pensez qu\'il s\'agit d\'une erreur, n\'hésitez pas à <a href="http://scd.u-bordeaux3.fr/contact.php">nous contacter</a>.</p></div>');
       
+      // On va lancer la recherche B+ en arrière plan
+      jQuery.getJSON("http://www.geobib.fr/erms/getdispo.php?callback=?&isbn=" + bookisbn + "&issn=" + journalissn,
+        function(data)
+        {
+          if (data["dispo"] == 1)
+          {
+            $("#res_bplus").html("<a href='" + data["url"]+ "' class='article-button'>Document disponible dans Babord+</a> suivez ce lien pour vérifier qu'il correspond exactement à votre requête");
+          }
+          else
+          {
+            $("#res_bplus").html("Le document ne semble pas non plus disponible dans Babord+. Vous pouvez néanmoins le vérifier en suivant le lien ci-dessous.");
+          }
+        }
+      );
 //      '<p>Si vous pensez qu\'il s\'agit d\'une erreur, n\'hésitez pas à <a href="http://scd.u-bordeaux3.fr/contact.php">nous contacter</a>.</p></div>'
     }
     else
@@ -540,36 +563,4 @@ jQuery(document).ready(function ()
     }
   );
 
-  jQuery("#360link-reset #page-content ul li a").click
-  (
-    function ()
-    {
-      // On va devoir gérer les stats
-      return true;
-      clicks = clicks + 1;
-      link = encodeURIComponent(window.location);
-      DBname = encodeURIComponent(jQuery(this).siblings("a.SS_DatabaseHyperLink").text());
-      ts = Math.round((new Date()).getTime() / 1000);
-      datastring = datastring + ts + "," + DBname + "," + link + "\n";
-
-      if (clicks > 1)
-      {
-        jQuery(".tooltip").show();
-        //lets also grab the openURL we are passing to the browser and pass it off
-        //to a PHP script that will write it elsewhere, so it can be checked
-        
-        datastring = "data=" + datastring;
-        jQuery.ajax
-        (
-          {
-            dataType: "string",
-            type: "POST",
-            url: "http://catalogue.bu.univ-rennes2.fr/360link/url_write.php",
-            data: datastring
-          }
-        );
-        datastring = "";
-      }
-    }
-  );
 });

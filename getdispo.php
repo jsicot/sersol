@@ -83,8 +83,7 @@
   }
   elseif ($issn)
   {
-    $url = "http://babordplus.univ-bordeaux.fr/resultat.php?type_rech=ra&bool[]=&index[]=issn_tous&value[]=".$issn."&bool[]=AND&index[]=fulltext&value[]=&bool[]=AND&index[]=fulltext&value[]=&spec_expand=1&typedoc=&docnum=&spec_tri_annee_start=&spec_tri_annee_end=&sort_define=score&sort_order=1&rows=10";
-
+    $url = "http://babordplus.univ-bordeaux.fr/resultat.php?type_rech=ra&bool[]=&index[]=issn_tous&value[]=".$issn."&bool[]=AND&index[]=fulltext&value[]=&bool[]=AND&index[]=fulltext&value[]=&spec_expand=1&typedoc=&docnum=&spec_tri_annee_start=&spec_tri_annee_end=&sort_define=score&sort_order=1&rows=10&fq=docnum:(\"0\")";
     $html = file_get_html($url);
     
     if (
