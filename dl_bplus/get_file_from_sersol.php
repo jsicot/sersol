@@ -1,8 +1,10 @@
 <?php
+  date_default_timezone_set("Europe/Paris");
   $login = "sylvain.machefert@u-bordeaux3.fr";
   $zip_file_path = date("Ymd").'_3IN_SSID.zip';
   $csv_file_path = date("Ymd").'_3IN_SSID_original.csv';
   $final_file_path = date("Ymd").'_ERMS_bx3.csv';
+
   
   require_once("include/download.php");
   require_once("include/extract.php");
